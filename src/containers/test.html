@@ -1,0 +1,144 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="casm.CSS">
+<script type="text/javascript">
+
+function test(){
+var json = [{
+        "fileID": 3,
+        "fileName": "Krishna Chaitanya Balivada.009",
+        "fileRecCount": 10,
+        "procsdRecCount": 0,
+        "fileSeqNum": 1,
+        "fileSrcSysNM": "BDCASM-RISKODLACCT",
+        "fileArrTime": 1531313955103,
+        "filePrcsStrtTM": 1530815400000,
+        "filePrcsEndTM": null,
+        "jobPrcsStCode": 1,
+        "priorityCode": "5",
+        "retryCount": 0,
+        "jobName": "Krishna Chaita0",
+        "aimID": "200005076",
+        "stopFlagInd": 1,
+        "lastStoppedTimestamp": null,
+        "lastRestTimestamp": null,
+        "exceptionOccured": false,
+        "updated": false,
+        "inserted": false
+    }];
+var tr;
+        for (var i = 0; i < json.length; i++) {
+            tr = $('<tr/>');
+            tr.append("<td>" + json[i].fileName + "</td>");
+            tr.append("<td>" + json[i].jobName + "</td>");
+            tr.append("<td>" + json[i].lastStoppedTimestamp + "</td>");
+            $('table').append(tr);
+}
+}
+</script>
+<html lang="en">
+<div class="header">
+    <div class="image">	</div><div class="text">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; CAS Batch Scheduler</div>
+</div>
+<title>Batch Scheduler</title>
+<body>
+<input type="hidden" id="jobList" value="${jobList}" ></input>
+	<input type="hidden" id="aimList" value="${aimList}" ></input>
+<div class="container">
+
+<div class="panel panel-primary">
+    
+      <div class="panel-body">
+	        <div class='col-md-3' >
+			   <a href="">Home</a>&nbsp;&nbsp;
+			   <a href="">View</a>&nbsp;&nbsp;
+			   <a href="">About</a>
+      </div>
+	  
+   </div>
+   </div>
+ 
+    
+      <div class="panel-body">
+	        <div class='col-md-10' >
+			
+               <form class="form-inline">
+			   <label for="inputAIMID" class="control-label">AIM ID</label> 
+			   <select  class="form-control" name="fname" id="fname"> 
+			   <option>500003003</option>
+			   </select>
+			   
+			    <label class="control-label">File Arrival Date Range  From</label>
+				<input type="date" id="party-time"  name="party-time" class="form-control" />
+				 <label class="control-label"> To </label>
+				<input type="date" class="form-control" />
+				  <!-- <label class="control-label col-xs-8">To</label> -->
+                  <!-- <div class='input-group date' id='datetimepicker1' class="col-xs-8">					                   -->
+					<!-- <input type='text' class="form-control" /> -->
+                     <!-- <span class="input-group-addon"> -->
+                     <!-- <span class="glyphicon glyphicon-calendar"></span> -->
+                     <!-- </span> -->
+                  <!-- </div> -->
+				  
+               <input type="button" onclick="test();" class="btn btn-primary" value="Go">
+			 
+			   </form>
+			   
+            </div>
+			 </br>
+			 </div>
+			  <div class="panel panel-primary">
+			  <div class="panel-body tablediv">
+			  <div style="overflow-x:auto;">
+			  
+         <table  class="table" >
+    <thead>
+      <tr >
+        <th  ><font size="1.5">File Name</th>
+        <th ><font size="1.5">Status</th>
+        <th ><font size="1.5">Action</th>
+		<th  ><font size="1.5">Feed Name</th>
+        <th ><font size="1.5">Seq No</th>
+        <th ><font size="1.5">Arrival Time</th>
+		<th  ><font size="1.5">Start Time</th>
+        <th ><font size="1.5">Completion Time</th>
+        <th ><font size="1.5">Processed Record</th>
+      </tr>
+    </thead>
+	
+    <tbody>
+      <tr bgcolor="#cce6ff">
+        <td><font size="1">KBCRISKODK FHHFGHF jkjghjkhgH .141640</td>
+        <td style="background-color: #82a43a"><font size="1">Completed</td>
+        <td ><table><tr><td><div class="pause "></td><td>  <div class="restart"></tr></table></td>
+		<td><font size="1">KBCRISKODK</td>
+        <td><font size="1">0005</td>
+        <td><font size="1">2018-08-08 12:00:00</td>
+		<td><font size="1">2018-08-08 12:00:00</td>
+        <td><font size="1">2018-08-08 12:00:00</td>
+        <td><font size="1">100000</td>
+		
+      </tr>
+	    
+     
+      
+      
+    </tbody>
+
+  </table>	
+		</div>
+       </div>
+	  
+   </div>
+</div>
+<div class="legend"></div>
+</body>
+<div class="footer">
+          <!-- Content -->
+		  
+          
+</html>

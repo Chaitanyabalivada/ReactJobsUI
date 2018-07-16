@@ -1,0 +1,81 @@
+.header {
+    background-color: #C4C1C0;
+
+}
+
+.header .image {
+    background: url("../AmexLogo.PNG") 
+                no-repeat;
+    width: 65px;
+    height: 64px;
+    
+}
+
+.header .text {
+    font: x-large sans-serif;
+    
+}
+
+.header .image, 
+.header .text {
+    display: inline-block;
+    vertical-align: middle;
+	
+}
+ .pause {
+    background: url("../pause2.PNG") 
+                no-repeat;
+    width: 26px;
+    height: 27px;
+    
+}
+ .restart {
+    background: url("../restart.PNG") 
+                no-repeat;
+    width: 26px;
+    height: 27px;
+    
+}
+.legend {
+  background: url("../legend.jpg") 
+                no-repeat;
+	width: 1000px;
+    height: 35px;
+	text-align: right;
+}
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #e6f3ff; 
+}
+th { 
+  background: #003366; 
+  color: white; 
+  font-weight: bold; 
+  font-size: .8e;
+}
+td, th { 
+  padding: 0; 
+  border: 1px solid white; 
+  text-align: left; 
+  font-size: .8em;
+}
+.table td, .table th{
+padding: 0;
+}
+.tablediv{
+  height: 400px;
+ overflow-y: auto;
+}
+.footer {
+    background-color: #C4C1C0;
+	size:"1";
+}
+
+.brown{color:#f3341a}
